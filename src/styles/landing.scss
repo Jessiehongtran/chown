@@ -1,0 +1,101 @@
+.landing {
+    min-height: 100vh;
+    background-color: blue; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, pink, blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        font-family: 'Caveat', cursive;
+        display: flex;
+        align-items: baseline;
+        padding: 20px 0 0 40px;
+        
+        .name {
+            font-size: 50px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .tagline {
+            font-size: 22px;
+        }
+    }
+
+    .depart-arrive {
+        margin-top: 100px;
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+           
+
+            .place {
+                display: flex;
+                align-items: center;
+                border: 2px dashed grey;
+                padding: 5px 20px 5px 20px ;
+                border-radius: 16px;
+                max-width: 300px;
+                background-color: white;
+
+                input {
+                    border: none;
+                    background-color: inherit;
+                    height: 50px;
+                    font-size: 30px;
+                    border: none;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+
+            .arrow-right {
+                max-height: 200px;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px ;
+
+        .find {
+            margin-bottom: 20px;
+            padding: 15px 8px 15px 8px;
+            border-radius: 8px;
+            border: none;
+            width: 200px;
+            background-image: linear-gradient(to bottom right, lavenderblush, lightblue);
+            font-size: 20px;
+        }
+
+        .find:hover {
+            background-image: linear-gradient(to bottom right, lavenderblush, lavenderblush);
+        }
+
+        .resell {
+            padding: 15px 8px 15px 8px;
+            border-radius: 8px;
+            border: none;
+            width: 200px;
+            background-image: linear-gradient(to bottom right, lightblue, lavenderblush);
+            font-size: 20px;
+        }
+
+        .resell:hover {
+            background-image: linear-gradient(to bottom right, lightblue, lightblue);
+        }
+    }
+}
