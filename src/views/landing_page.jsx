@@ -1,13 +1,20 @@
 import React from 'react';
 import '../styles/landing.scss';
+import { geolocated } from 'react-geolocated';
+import Geosuggest from 'react-geosuggest';
 
-export default class Landing extends React.Component {
+class Landing extends React.Component {
     constructor(props){
         super(props);
         this.state = {
 
         }
     }
+
+    onSuggestSelect(suggest){
+        
+    }
+
 
     render(){
         return (
@@ -23,9 +30,10 @@ export default class Landing extends React.Component {
                 <div className="depart-arrive">
                     <div className="wrapper">
                         <div className="place">
-                            <input
-                                type="text" 
-                                placeholder="depart"
+                            <Geosuggest 
+                                onSuggestSelect={suggest => this.onSuggestSelect(suggest)}
+                                location={window.google ? new window.google.maps.LatLng(53.558572, 9.9278215): {lat: 53.558572, lng: 9.9278215}}
+                                radius="20"
                             />
                         </div>
                         <img className="arrow-right" src="arrowright.png"/>
@@ -45,3 +53,12 @@ export default class Landing extends React.Component {
         )
     }
 }
+
+export default geolocated(
+    {
+        positionOptions: {
+            enableHighAccuracy: false,
+        },
+        userDecisionTimeout: 5000
+    }
+)(Landing)

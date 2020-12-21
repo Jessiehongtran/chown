@@ -77,12 +77,12 @@
             border-radius: 8px;
             border: none;
             width: 200px;
-            background-image: linear-gradient(to bottom right, lavenderblush, lightblue);
+            background-color: pink;
             font-size: 20px;
         }
 
         .find:hover {
-            background-image: linear-gradient(to bottom right, lavenderblush, lavenderblush);
+            background-color: lavenderblush;
         }
 
         .resell {
@@ -90,12 +90,14 @@
             border-radius: 8px;
             border: none;
             width: 200px;
-            background-image: linear-gradient(to bottom right, lightblue, lavenderblush);
+            background-color: blue;
+            color: white;
             font-size: 20px;
         }
 
         .resell:hover {
-            background-image: linear-gradient(to bottom right, lightblue, lightblue);
+            background-color: lightblue;
+            color: black
         }
     }
 }

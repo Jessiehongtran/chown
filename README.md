@@ -1,2 +1,2 @@
-# Platform to second hand ticket
+# Platform for second hand ticket
 
