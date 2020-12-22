@@ -1,0 +1,18 @@
+.nav {
+    display: flex; 
+    justify-content: flex-start;
+    min-height: 60px;
+    border-bottom: 1px solid silver;
+    font-family: 'Caveat', cursive;
+
+    .logo-wrapper {
+        display: flex;
+        align-items: baseline;
+        margin: 10px 0 0 20px;
+
+        .logo {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+    }
+}

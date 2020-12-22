@@ -12,7 +12,7 @@ class Landing extends React.Component {
     }
 
     onSuggestSelect(suggest){
-        
+        console.log('suggest', suggest)
     }
 
 
@@ -34,13 +34,21 @@ class Landing extends React.Component {
                                 onSuggestSelect={suggest => this.onSuggestSelect(suggest)}
                                 location={window.google ? new window.google.maps.LatLng(53.558572, 9.9278215): {lat: 53.558572, lng: 9.9278215}}
                                 radius="20"
+                                placeholder="Depart"
+                                initialValue=""
+                                className="depart"
+                        
                             />
                         </div>
                         <img className="arrow-right" src="arrowright.png"/>
                         <div className="place">
-                            <input
-                                type="text" 
-                                placeholder="arrive"
+                            <Geosuggest 
+                                onSuggestSelect={suggest => this.onSuggestSelect(suggest)}
+                                location={window.google ? new window.google.maps.LatLng(53.558572, 9.9278215): {lat: 53.558572, lng: 9.9278215}}
+                                radius="20"
+                                placeholder="Arrive"
+                                initialValue=""
+                                
                             />
                         </div>
                     </div>

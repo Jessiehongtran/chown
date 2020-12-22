@@ -1,0 +1,60 @@
+.ticket {
+    min-height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+
+    .info {
+
+        .each-way {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .carrier-logo {
+              
+                img {
+                    max-width: 80px;
+                }
+            }
+
+            .text {
+                margin-right: 20px;
+                .time {
+                    font-weight: bold;
+                }
+
+                .carrier_name {
+
+                }
+
+            }
+
+            .duration-wrapper {
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+
+    }
+
+    .price {
+
+        .tag {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .view-action {
+
+        }
+
+    }
+}

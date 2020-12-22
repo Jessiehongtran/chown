@@ -1,0 +1,38 @@
+.find-ticket {
+    
+
+    .place-time {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-bottom: 1px solid #E2E2E2 ;
+
+
+        .input-wrapper {
+            margin-right: 10px;
+           
+            input {
+                height: 30px;
+                padding: 10px;
+                background-color: #F6F6F6;
+                border: none;
+                
+            }
+        }
+    }
+
+    .tickets-wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: #FAFAFA  ;
+        min-height: 100vh;
+
+        .tickets {
+            width: 50%;
+            min-height: 100vh;
+            background-color: #FAFAFA ;
+
+        }
+    }
+
+}
