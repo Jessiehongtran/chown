@@ -60,7 +60,7 @@ export default class Ticket extends React.Component {
         if (min.toString().length < 2){
           min = min.toString() + "0"
         }
-        return hour + ":" + min
+        return hour + "h " + min + "m"
     }
 
     render(){
@@ -113,6 +113,12 @@ export default class Ticket extends React.Component {
                     <p className="tag">
                     ${ticket.return ? ticket.one_way.price + ticket.return.price : ticket.one_way.price}
                     </p>
+                    <div className="post-long">
+                        Posted for 3 days
+                    </div>
+                    <div className="status">
+                        Active
+                    </div>
                     <button className="view-action">View deal</button>
                 </div>
             </div>
