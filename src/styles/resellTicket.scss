@@ -10,69 +10,146 @@
 
     .ticket-info {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 80px;
+        justify-content: center;
+        padding-top: 60px;
+        width: 50%;
+        // border: 1px solid grey;
 
-        label {
-            margin-right: 10px;
-        }
-       
-
-        .transport-type {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            
-            select {
-                height: 30px
-            }
-        }
-
-        .deadline {
-            margin-bottom: 10px;
-
-            input {
-                height: 30px
-            }
-        }
-
-        .details {
-            margin-bottom: 10px;
+        .wrapper {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            // border: 1px solid blue;
+            width: 100%;
 
-            .title {
-                font-weight: bold;
-                margin-bottom: 10px;
-                margin-top: 10px;
-            }
-
-            input {
-                height: 30px;
+            label {
                 margin-right: 10px;
             }
+        
 
-            .depart {
+            .transport-type {
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                label {
+                    font-weight: bold;
+                }
+                
+                select {
+                    height: 30px
+                }
+            }
+
+            .deadline {
                 margin-bottom: 10px;
+
+                label {
+                    font-weight: bold;
+                }
+
+                input {
+                    height: 30px
+                }
+            }
+
+            .depart-arrive {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                margin-top: 30px;
+
+                .details {
+                    margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-right: 10px;
+
+                    .title {
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        color: #3E2D86;
+                    }
+
+                    label {
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        height: 30px;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        padding-left: 10px;
+                    }
+
+                    .place-time {
+                        display: flex;
+
+                        .depart, .arrive {
+                            margin-bottom: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+
+                        .depart {
+                            margin-right: 20px;
+                        }
+                        
+                    }
+
+                    .carrier_name, .reserve_code {
+                        margin-bottom: 10px;
+                    }
+
+                    .carrier_name {
+                        margin-bottom: 20px;
+                    }
+
+                    .reserve_code {
+                        label {
+                            color: red
+                        }
+
+                        input {
+                            border: 1px solid red;
+                            padding-left: 10px ;
+                            
+                        }
+                    }
+
+                    .price {
+                        
+                        input {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+                .add-btn {
+                    margin: 10px 30px 10px 0;
+                    background-color: #E4E6F5;
+                    color: #3E2D86;
+                    border: none;
+                    padding: 10px ;
+                    border-radius: 6px;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+            }
+
+            .publish-btn {
+                color: white;
+                background-color: #3E2D86;
+                padding: 10px 25px 10px 25px;
+                border-radius: 4px;
+                border: none;
+                font-size: 16px;
+                margin-top: 10px;
             }
             
-            .arrive {
-                margin-bottom: 10px;
-            }
-
-            .carrier_name {
-                margin-bottom: 10px;
-            }
-
-            .price {
-
-            }
-        }
-
-        .add-btn {
-            margin-bottom: 10px;
-            margin-top: 10px;
         }
     }
 }

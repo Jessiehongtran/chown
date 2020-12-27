@@ -7,7 +7,7 @@ export const tickets = [
             arrive_day: "11/21/2020",
             carrier_name: "American Airlines",
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
-            price: 200
+            price: 200,
         },
         return: {
             depart_time: "11:52:00",
@@ -16,8 +16,9 @@ export const tickets = [
             arrive_day: "11/22/2020",
             carrier_name: "American Airlines",
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
-            price: 242
+            price: 242,
         },
+        sell_expire_on: 12/25/2020
     },
     {
         one_way: {
@@ -38,6 +39,7 @@ export const tickets = [
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
             price: 242
         },
+        sell_expire_on: 12/30/2020
     },
     {
         one_way: {
@@ -58,6 +60,7 @@ export const tickets = [
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
             price: 242
         },
+        sell_expire_on: 12/28/2020
     },
     {
         one_way: {
@@ -78,6 +81,7 @@ export const tickets = [
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
             price: 242
         },
+        sell_expire_on: 12/29/2020
     },
     {
         one_way: {
@@ -98,6 +102,7 @@ export const tickets = [
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
             price: 242
         },
+        sell_expire_on: 12/27/2020
     },
     {
         one_way: {
@@ -118,5 +123,6 @@ export const tickets = [
             carrier_logo: "https://i.pinimg.com/originals/9f/92/b9/9f92b92b83bf3426b37b7b0e45ab2d94.png",
             price: 242
         },
+        sell_expire_on: 12/26/2020
     }
 ]

@@ -8,8 +8,8 @@ export default class FindTicket extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            depart_place: "Depart place",
-            arrive_place: "Arrive place",
+            depart_place: this.props.depart_place,
+            arrive_place: this.props.arrive_place,
             depart_time: "Depart time",
             return_time: "Return time"
         }
@@ -34,7 +34,7 @@ export default class FindTicket extends React.Component {
                             type="text"
                             value={this.state.depart_place}
                             onChange={this.handleChange}
-                            name="depart_place"
+                            name = "depart_place"
                         />
                     </div>
                     <div className="input-wrapper">
@@ -49,6 +49,7 @@ export default class FindTicket extends React.Component {
                             value = {depart_time}
                             onChange={this.handleChange}
                             name = "depart_time"
+                            type="date"
                         />
                     </div>
                     <div className="input-wrapper">
@@ -56,6 +57,7 @@ export default class FindTicket extends React.Component {
                             value = {return_time}
                             onChange={this.handleChange}
                             name = "return_time"
+                            type="date"
                         />
                     </div>
                 </div>

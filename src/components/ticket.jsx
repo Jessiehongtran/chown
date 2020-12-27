@@ -68,58 +68,62 @@ export default class Ticket extends React.Component {
 
         return (
             <div className="ticket">
-                <div className="info">
-                    <div className="each-way">
-                        <div className="carrier-logo">
-                            <img src={ticket.one_way.carrier_logo} />
-                        </div>
-                        <div className="text">
-                            <p className="time">
-                                {this.convertNumToAmPm(ticket.one_way.depart_time)} -  {this.convertNumToAmPm(ticket.one_way.arrive_time)} 
-                            </p>
-                            <p className="carrier_name">
-                                {ticket.one_way.carrier_name}
-                            </p>
-                        </div>
-                        <div className="duration-wrapper">
-                            <div className="number">
-                                {this.turnNumToHourMin(this.turnDayTimeToNum(ticket.one_way.arrive_time, ticket.one_way.arrive_day) - this.turnDayTimeToNum(ticket.one_way.depart_time, ticket.one_way.depart_day))}
-                            </div>
-                        </div>
-                    </div>
-                    {ticket.return
-                    ? <div className="each-way">
-                        <div className="carrier-logo">
-                            <img src={ticket.return.carrier_logo}/>
-                        </div>
-                        <div className="text">
-                            <p className="time">
-                                {this.convertNumToAmPm(ticket.return.depart_time)} -  {this.convertNumToAmPm(ticket.return.arrive_time)} 
-                            </p>
-                            <p className="carrier">
-                                {ticket.return.carrier_name}
-                            </p>
-                        </div>
-                        <div className="duration-wrapper">
-                            <div className="number">
-                            {this.turnNumToHourMin(this.turnDayTimeToNum(ticket.return.arrive_time, ticket.return.arrive_day) - this.turnDayTimeToNum(ticket.return.depart_time, ticket.return.depart_day))}
-                            </div>
-                        </div>
-                      </div>
-                    : null
-                    }
-                </div>
-                <div className="price">
-                    <p className="tag">
-                    ${ticket.return ? ticket.one_way.price + ticket.return.price : ticket.one_way.price}
-                    </p>
+                <div className="status">
                     <div className="post-long">
-                        Posted for 3 days
+                            Posted for 3 days
                     </div>
-                    <div className="status">
-                        Active
+                    <div className="active-status">
+                            Active
                     </div>
-                    <button className="view-action">View deal</button>
+                </div>
+                <div className="content">
+                    <div className="info">
+                        <div className="each-way">
+                            <div className="carrier-logo">
+                                <img src={ticket.one_way.carrier_logo} />
+                            </div>
+                            <div className="text">
+                                <p className="time">
+                                    {this.convertNumToAmPm(ticket.one_way.depart_time)} -  {this.convertNumToAmPm(ticket.one_way.arrive_time)} 
+                                </p>
+                                <p className="carrier_name">
+                                    {ticket.one_way.carrier_name}
+                                </p>
+                            </div>
+                            <div className="duration-wrapper">
+                                <div className="number">
+                                    {this.turnNumToHourMin(this.turnDayTimeToNum(ticket.one_way.arrive_time, ticket.one_way.arrive_day) - this.turnDayTimeToNum(ticket.one_way.depart_time, ticket.one_way.depart_day))}
+                                </div>
+                            </div>
+                        </div>
+                        {ticket.return
+                        ? <div className="each-way">
+                            <div className="carrier-logo">
+                                <img src={ticket.return.carrier_logo}/>
+                            </div>
+                            <div className="text">
+                                <p className="time">
+                                    {this.convertNumToAmPm(ticket.return.depart_time)} -  {this.convertNumToAmPm(ticket.return.arrive_time)} 
+                                </p>
+                                <p className="carrier">
+                                    {ticket.return.carrier_name}
+                                </p>
+                            </div>
+                            <div className="duration-wrapper">
+                                <div className="number">
+                                {this.turnNumToHourMin(this.turnDayTimeToNum(ticket.return.arrive_time, ticket.return.arrive_day) - this.turnDayTimeToNum(ticket.return.depart_time, ticket.return.depart_day))}
+                                </div>
+                            </div>
+                        </div>
+                        : null
+                        }
+                    </div>
+                    <div className="price">
+                        <p className="tag">
+                        ${ticket.return ? ticket.one_way.price + ticket.return.price : ticket.one_way.price}
+                        </p>
+                        <button className="view-action">View deal</button>
+                    </div>
                 </div>
             </div>
         )
