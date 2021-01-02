@@ -3,9 +3,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: grey;
+    padding: 0 0 60px 0;
 
     .nav {
         width: 100%;
+        background-color: white;
     }
 
     .ticket-info {
@@ -13,14 +16,14 @@
         justify-content: center;
         padding-top: 60px;
         width: 50%;
-        // border: 1px solid grey;
 
         .wrapper {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            // border: 1px solid blue;
+            background-color: white;
             width: 100%;
+            padding: 30px;
 
             label {
                 margin-right: 10px;
@@ -30,6 +33,7 @@
             .transport-type {
                 margin-top: 10px;
                 margin-bottom: 20px;
+                padding-left: 20px;
 
                 label {
                     font-weight: bold;
@@ -42,6 +46,7 @@
 
             .deadline {
                 margin-bottom: 10px;
+                padding-left: 20px;
 
                 label {
                     font-weight: bold;
@@ -56,7 +61,7 @@
                 width: 100%;
                 display: flex;
                 align-items: flex-start;
-                margin-top: 30px;
+                margin-top: 10px;
 
                 .details {
                     margin-bottom: 10px;
@@ -64,12 +69,17 @@
                     flex-direction: column;
                     align-items: flex-start;
                     margin-right: 10px;
+                    padding: 20px;
 
                     .title {
                         font-weight: bold;
                         margin-bottom: 10px;
                         margin-top: 10px;
                         color: #3E2D86;
+                    }
+
+                    select {
+                        background-color: inherit;
                     }
 
                     label {
@@ -81,6 +91,8 @@
                         margin-right: 10px;
                         margin-bottom: 10px;
                         padding-left: 10px;
+                        background-color: inherit;
+                        border: 1px solid grey
                     }
 
                     .place-time {
@@ -128,7 +140,7 @@
                 }
 
                 .add-btn {
-                    margin: 10px 30px 10px 0;
+                    margin: 30px 30px 10px 0;
                     background-color: #E4E6F5;
                     color: #3E2D86;
                     border: none;
@@ -136,6 +148,8 @@
                     border-radius: 6px;
                     font-weight: bold;
                     font-size: 16px;
+                   
+
                 }
 
             }
@@ -148,6 +162,7 @@
                 border: none;
                 font-size: 16px;
                 margin-top: 10px;
+                margin-left: 20px;
             }
             
         }

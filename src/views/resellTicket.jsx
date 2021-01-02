@@ -49,7 +49,8 @@ export default class ResellTicket extends React.Component {
                 isPublished: false,
                 isPaymentProcessed: false,
                 isSold: false
-            }
+            },
+            oneway_bgcolor: "white"
 
         }
         this.toggleReturn = this.toggleReturn.bind(this)
@@ -84,7 +85,8 @@ export default class ResellTicket extends React.Component {
                 post: {
                     ...this.state.post,
                     hasReturn: true
-                }
+                },
+                oneway_bgcolor: "grey"
             })
         } else {
             this.setState({ 
@@ -92,7 +94,8 @@ export default class ResellTicket extends React.Component {
                 post: {
                     ...this.state.post,
                     hasReturn: false
-                }
+                },
+                oneway_bgcolor: "white"
             })
         }
     }
@@ -202,7 +205,7 @@ export default class ResellTicket extends React.Component {
                 <div className="nav">
                     <Nav />
                 </div>
-                <div className="ticket-info">
+                <div className="ticket-info" >
                     <div className="wrapper">
                         <div className="transport-type">
                             <label>Transportation Type</label>
@@ -222,7 +225,7 @@ export default class ResellTicket extends React.Component {
                             />
                         </div>
                         <div className="depart-arrive">
-                            <div className="details">
+                            <div className="details" style={{backgroundColor: this.state.oneway_bgcolor}}>
                                 <h2 className="title">One-way</h2>
                                 <div className="place-time">
                                     <div className="depart">
@@ -314,6 +317,7 @@ export default class ResellTicket extends React.Component {
                                         <input
                                             placeholder="Newyork"
                                             name="depart_place"
+                                            value={this.state.oneway_ticket.arrive_place}
                                             onChange={this.handleChangeTicketReturn}
                                         />
                                         <label>Day</label>
@@ -337,6 +341,7 @@ export default class ResellTicket extends React.Component {
                                         <input
                                             placeholder="San Jose"
                                             name="arrive_place"
+                                            value={this.state.oneway_ticket.return_place}
                                             onChange={this.handleChangeTicketReturn}
                                         />
                                         <label>Day</label>
