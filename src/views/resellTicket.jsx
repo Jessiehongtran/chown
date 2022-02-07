@@ -150,6 +150,20 @@ export default class ResellTicket extends React.Component {
         })
     }
 
+    async postAPost(){
+
+        const newPost = this.state.post;
+
+        console.log('newpost', newPost)
+
+        try {
+            const res = axios.post(`${ API_URL }/ticket`, newPost)
+            console.log('res in posting a post', res.data)
+        } catch (err){
+            console.log(err)
+        }
+    }
+
     async handleSubmitPost(){
         const {
             oneway_ticket,
@@ -183,6 +197,8 @@ export default class ResellTicket extends React.Component {
 
                 if (resPostReturn && resPostReturn.data.id){
                     post.return_ticketID = resPostReturn.data.id;
+
+
                 }
             }
 
@@ -297,7 +313,7 @@ export default class ResellTicket extends React.Component {
                                     <input 
                                         placeholder="0"
                                         type="number"
-                                        value="price"
+                                        name="price"
                                         onChange={this.handleChangeTicketOneWay}
                                     />
                                     <span>$</span>
